@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from './Login.jsx';
 import Chat from './Chat.jsx';
 import MessageComposer from './MessageComposer.jsx';
 import AppStore from '../stores/AppStore.js';
@@ -29,10 +30,24 @@ class App extends React.Component {
     }
 
     render() {
+        var content = (<Login />);
+        
+        if( this.state.page === "chat" ) {
+            content = (
+                <div className="row">
+                    <div className="col-md-12">
+                        <Chat messages={this.state.messages} />
+                    </div>
+                    <div className="col-md-12">
+                        <MessageComposer />
+                    </div>
+                </div>
+            );
+        }
+
         return (
             <div>
-                <Chat messages={this.state.messages} />
-                <MessageComposer />
+                {content}
             </div>
         );
     }

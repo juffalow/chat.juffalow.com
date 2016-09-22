@@ -15,10 +15,6 @@ module.exports = {
                 plugins: ['transform-class-properties'],
                 presets: ['es2015', 'react']
             }
-        },
-        {
-            test: /\.js$/,
-            loader: "strip-loader?strip[]=debug,strip[]=console.log"
         }
     ]
   },

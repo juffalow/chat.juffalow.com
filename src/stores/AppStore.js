@@ -13,6 +13,7 @@ class AppStore extends EventEmitter {
     constructor() {
         super();
         this.messages = [];
+        this.page = "login";
     }
 
     emitChange() {
@@ -37,7 +38,8 @@ class AppStore extends EventEmitter {
 
     getState() {
         return {
-            messages: this.messages
+            messages: this.messages,
+            page: this.page
         }
     }
 
@@ -47,6 +49,14 @@ class AppStore extends EventEmitter {
      */
     addMessage(text) {
         this.messages.push(text);
+    }
+
+    /**
+     *
+     * @param string page
+     */
+    setPage(page) {
+        this.page = page;
     }
 }
 
@@ -58,6 +68,10 @@ appStore.dispatchToken = AppDispatcher.register(function(payload) {
     switch(action.actionType) {
         case Constants.MESSAGE_RECEIVED:
             appStore.addMessage(action.text);
+            appStore.emitChange();
+            break;
+        case Constants.USER_LOGIN:
+            appStore.setPage("chat");
             appStore.emitChange();
             break;
     }

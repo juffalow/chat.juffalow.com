@@ -11,12 +11,13 @@ const AppActions = {
      *
      * @param string text
      */
-    newMessage: function(text) {
-        console.log("AppActions.newMessage(" + text + ")");
+    login: function(username) {
+        console.log("LoginActions.login(" + username + ")");
         AppDispatcher.handleAction({
-            actionType: Constants.MESSAGE_RECEIVED,
-            text: text,
+            actionType: Constants.USER_LOGIN,
+            username: username,
         });
+        Client.login(username);
     }
 };
 

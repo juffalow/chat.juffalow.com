@@ -12,6 +12,7 @@ class MessageComposer extends React.Component {
             text: ""
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleKeyUp = this.handleKeyUp.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
     }
 
@@ -19,18 +20,28 @@ class MessageComposer extends React.Component {
          this.setState({text: event.target.value});
     }
 
+    handleKeyUp(event) {
+        if( event.key === 'Enter' ) {
+            MessageComposerActions.sendMessage(this.state.text);
+            this.setState({text: ""});
+        }
+    }
+
     sendMessage(event) {
         event.preventDefault();
         console.log("MessageComposer.sendMessage [" + this.state.text + "]");
         MessageComposerActions.sendMessage(this.state.text);
+        this.setState({text: ""});
     }
 
     render() {
         return (
             <div>
                 <form>
-                    <textarea name="text" value={this.state.text} onChange={this.handleChange} />
-                    <button onClick={this.sendMessage}>Send</button>
+                    <div className="form-group">
+                        <textarea className="form-control" name="text" value={this.state.text} onChange={this.handleChange} onKeyUp={this.handleKeyUp} />
+                    </div>
+                    <button className="btn btn-default pull-right" onClick={this.sendMessage}>Send</button>
                 </form>
             </div>
         );
