@@ -48,3 +48,5 @@ First working example. Basically, it is the copy of [iris websocket example](htt
 ### v2.0.0
 
 React and Bootstrap is used.
+
+* v2.0.1 - little changes, connets to server 1.0.1

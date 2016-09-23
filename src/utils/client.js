@@ -4,7 +4,7 @@ var w;
 
 const client = {
     run: function(host) {
-        w = new Ws("ws://95.85.41.108:8080/my_endpoint");
+        w = new Ws("ws://95.85.41.108:8080/chatapp");
 
         w.OnConnect(function () {
     		console.log("Connected!");
