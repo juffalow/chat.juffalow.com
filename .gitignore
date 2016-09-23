@@ -1,3 +1,4 @@
 .DS_Store
-/js/
+js/*
+!js/favico.min.js
 /node_modules/

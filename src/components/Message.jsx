@@ -14,6 +14,10 @@ class Message extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        window.scrollTo(0,document.body.scrollHeight);
+    }
+
     render() {
         return (
             <li className="message">

@@ -4,6 +4,7 @@ import Chat from './Chat.jsx';
 import MessageComposer from './MessageComposer.jsx';
 import AppStore from '../stores/AppStore.js';
 import Client from '../utils/client.js';
+import Notification from '../utils/notification.js';
 
 /**
  * Main component
@@ -24,6 +25,7 @@ class App extends React.Component {
     componentWillMount() {
         AppStore.addChangeListener(this.onChange);
         Client.run("");
+        Notification.init();
     }
 
     componentWillUnmount() {

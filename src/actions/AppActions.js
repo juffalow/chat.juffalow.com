@@ -1,6 +1,7 @@
 import AppDispatcher from '../dispatcher/AppDispatcher.js';
 import Constants from '../constants/Constants.js';
 import Client from '../utils/client.js';
+import Notification from '../utils/notification.js';
 
 /**
  *
@@ -17,6 +18,7 @@ const AppActions = {
             actionType: Constants.MESSAGE_RECEIVED,
             text: text,
         });
+        Notification.newMessage();
     }
 };
 
