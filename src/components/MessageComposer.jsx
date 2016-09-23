@@ -2,6 +2,7 @@ import React from 'react';
 import MessageComposerActions from '../actions/MessageComposerActions.js';
 
 /**
+ * Form for creating and sending new messages
  *
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */
@@ -20,6 +21,11 @@ class MessageComposer extends React.Component {
          this.setState({text: event.target.value});
     }
 
+    /**
+     * User hit enter, the message should be sent
+     *
+     * @param object event
+     */
     handleKeyUp(event) {
         if( event.key === 'Enter' ) {
             MessageComposerActions.sendMessage(this.state.text);

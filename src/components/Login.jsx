@@ -2,6 +2,7 @@ import React from 'react';
 import LoginActions from '../actions/LoginActions.js';
 
 /**
+ * Login page ( initial page )
  *
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */

@@ -2,6 +2,7 @@ import React from 'react';
 import Message from './Message.jsx';
 
 /**
+ * List of messages in chat
  *
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */

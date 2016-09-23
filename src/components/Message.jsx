@@ -1,6 +1,7 @@
 import React from 'react';
 
 /**
+ * Single message in the list
  *
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */
