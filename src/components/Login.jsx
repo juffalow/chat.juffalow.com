@@ -32,7 +32,7 @@ class Login extends React.Component {
                     <form>
                         <div className="form-group">
                             <label htmlFor="loginName">Username</label>
-                            <input type="username" className="form-control" id="login-mail" placeholder="Username" value={this.state.username} onChange={this.handleChange} />
+                            <input type="text" className="form-control" id="login-mail" placeholder="Username" value={this.state.username} onChange={this.handleChange} />
                         </div>
                         <button type="submit" className="btn btn-default" onClick={this.login}>Log In</button>
                     </form>
