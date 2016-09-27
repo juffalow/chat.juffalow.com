@@ -5,3 +5,23 @@
 .navbar-brand span {
   color: red;
 }
+
+ul.chat {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+ul.chat li {
+    margin: 5px 0;
+}
+
+span.message-time {
+    color: #999;
+}
+
+textarea {
+    max-width: 100%;
+}

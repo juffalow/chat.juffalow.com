@@ -18,9 +18,9 @@ class Chat extends React.Component {
     render() {
         var messages = this.props.messages;
         return (
-            <ul>
-                {messages.map(function(text, index) {
-                    return <Message key={ index } text={text} />;
+            <ul className="chat">
+                {messages.map(function(message, index) {
+                    return <Message key={ index } time={message.time} username={message.username} text={message.text} />;
                 })}
             </ul>
         );

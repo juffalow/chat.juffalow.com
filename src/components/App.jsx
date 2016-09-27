@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from './Login.jsx';
 import Chat from './Chat.jsx';
+import UserList from './UserList.jsx';
 import MessageComposer from './MessageComposer.jsx';
 import AppStore from '../stores/AppStore.js';
 import Client from '../utils/client.js';
@@ -24,7 +25,7 @@ class App extends React.Component {
      */
     componentWillMount() {
         AppStore.addChangeListener(this.onChange);
-        Client.run("");
+        Client.run(this.props.host);
         Notification.init();
     }
 
@@ -46,10 +47,11 @@ class App extends React.Component {
         if( this.state.page === "chat" ) {
             content = (
                 <div className="row">
-                    <div className="col-md-12">
-                        <Chat messages={this.state.messages} />
+                    <div className="col-md-4 col-sm-12">
+                        <UserList usernames={this.state.usernames} />
                     </div>
-                    <div className="col-md-12">
+                    <div className="col-md-8 col-sm-12">
+                        <Chat messages={this.state.messages} />
                         <MessageComposer />
                     </div>
                 </div>

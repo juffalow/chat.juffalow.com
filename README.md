@@ -41,12 +41,17 @@ webpack --config webpack.production.config.js
 
 These versions are available under tags.
 
-### v1.0.0
+### v1.0.*
 
-First working example. Basically, it is the copy of [iris websocket example](https://github.com/iris-contrib/examples/tree/master/websocket) with login.
+* v1.0.0 - first working example. Basically, it is the copy of [iris websocket example](https://github.com/iris-contrib/examples/tree/master/websocket) with login.
 
-### v2.0.0
+### v2.0.*
 
 React and Bootstrap is used.
 
-* v2.0.1 - little changes, connets to server version  v1.0.1
+* v2.0.1 - little changes, connects to server version  v1.0.1
+* v2.0.2 - notifications
+
+### v3.0.*
+
+* v3.0.0 - list of users, few last messages, connects to server version v2.0.0

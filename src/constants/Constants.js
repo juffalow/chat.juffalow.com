@@ -10,7 +10,23 @@ const Constants = {
     /**
      *
      */
-    USER_LOGIN: "USER_LOGIN"
+    MESSAGE_LIST: "MESSAGE_LIST",
+    /**
+     *
+     */
+    USER_LOGIN: "USER_LOGIN",
+    /**
+     *
+     */
+    USER_LIST: "USER_LIST",
+    /**
+     *
+     */
+    USER_CONNECTED: "USER_CONNECTED",
+    /**
+     *
+     */
+    USER_DISCONNECTED: "USER_DISCONNECTED"
 };
 
 export default Constants

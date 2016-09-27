@@ -35,7 +35,6 @@ class MessageComposer extends React.Component {
 
     sendMessage(event) {
         event.preventDefault();
-        console.log("MessageComposer.sendMessage [" + this.state.text + "]");
         MessageComposerActions.sendMessage(this.state.text);
         this.setState({text: ""});
     }

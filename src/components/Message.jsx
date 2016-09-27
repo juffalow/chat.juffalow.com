@@ -7,7 +7,9 @@ import React from 'react';
  */
 class Message extends React.Component {
     static propTypes = {
-        text: React.PropTypes.string,
+        time : React.PropTypes.string,
+        username: React.PropTypes.string,
+        text: React.PropTypes.string
     };
 
     constructor(props) {
@@ -19,9 +21,11 @@ class Message extends React.Component {
     }
 
     render() {
+        var time = new Date(this.props.time);
+        var displayTime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
         return (
             <li className="message">
-                {this.props.text}
+                <span className="message-time">[ {displayTime} ]</span> {this.props.username}: {this.props.text}
             </li>
         );
     }
