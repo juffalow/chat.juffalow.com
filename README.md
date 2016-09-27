@@ -55,3 +55,4 @@ React and Bootstrap is used.
 ### v3.0.*
 
 * v3.0.0 - list of users, few last messages, connects to server version v2.0.0
+* v3.0.1 - server host, production without console logs

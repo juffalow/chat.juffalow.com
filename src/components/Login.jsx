@@ -37,7 +37,6 @@ class Login extends React.Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
